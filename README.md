@@ -3,7 +3,7 @@
 A full-stack LLM communicator deployed on AWS.  
 **Stack:** FastAPI · PostgreSQL (pgvector) · Redis · Docker · Terraform (EC2, IAM, VPC) · GitHub Actions (CI/CD)
 
-![Build](https://github.com/AhmadK005/Natural-Language-Communicator/actions/workflows/ci.yml/badge.svg)
+![Build](https://github.com/AhmadK005/Natural-Language-Communicator-/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 > ✨ Purpose: make it easy to interact with LLMs over a cloud-hosted, scalable backend with caching and infrastructure-as-code.
