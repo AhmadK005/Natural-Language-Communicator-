@@ -38,16 +38,30 @@ docker compose up --build
 ```
 
 ---
+
 ## 🗂 Repo Layout
 
-.
-├─ backend/           # FastAPI app (routes, services, models)
-├─ infra/             # Terraform (EC2, IAM, VPC, RDS)
-├─ frontend/          # React chat UI (optional)
-├─ docker/            # Dockerfiles / compose configs
-├─ .github/workflows/ # CI/CD pipelines
-├─ docs/              # diagrams, benchmarks, screenshots
-└─ README.md
+    .
+    ├─ backend/           # FastAPI app (routes, services, models)
+    │  ├─ app/
+    │  └─ requirements.txt
+    ├─ infra/             # Terraform (EC2, IAM, VPC, RDS)
+    │  ├─ main.tf
+    │  ├─ variables.tf
+    │  └─ outputs.tf
+    ├─ frontend/          # React chat UI (optional)
+    │  └─ package.json
+    ├─ docker/            # Dockerfiles / compose configs
+    │  └─ docker-compose.yml
+    ├─ .github/
+    │  └─ workflows/
+    │     └─ ci.yml
+    ├─ docs/              # diagrams, benchmarks, screenshots
+    │  └─ architecture.png
+    ├─ .env.example
+    ├─ .gitignore
+    ├─ LICENSE
+    └─ README.md
 
 
 
