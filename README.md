@@ -14,13 +14,13 @@ A full-stack LLM communicator deployed on AWS.
 
 ```mermaid
 flowchart LR
-  U[User] --> FE[Frontend (React/JS)]
+  U[User] --> FE[Frontend (React JS)]
   FE --> API[FastAPI Backend]
   API <--> REDIS[(Redis Cache)]
-  API <--> PG[(PostgreSQL + pgvector)]
+  API <--> PG[(PostgreSQL and pgvector)]
 
   subgraph AWS
-    API --- LB[ALB/NLB]
+    API --- LB[ALB or NLB]
     LB --- EC2[EC2 Instance(s)]
     EC2 -.docker.-> API
   end
@@ -28,9 +28,10 @@ flowchart LR
   subgraph IaC
     TF[Terraform] -->|provisions| EC2
     TF -->|provisions| PG
-    TF -->|provisions| VPC[VPC/Networking]
+    TF -->|provisions| VPC(VPC Networking)
     TF -->|IAM roles| API
   end
+
 ```
 
 ---
