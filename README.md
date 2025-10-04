@@ -18,11 +18,13 @@ flowchart LR
   FE --> API[FastAPI Backend]
   API <--> REDIS[(Redis Cache)]
   API <--> PG[(PostgreSQL + pgvector)]
+
   subgraph AWS
     API --- LB[ALB/NLB]
     LB --- EC2[EC2 Instance(s)]
     EC2 -.docker.-> API
   end
+
   subgraph IaC
     TF[Terraform] -->|provisions| EC2
     TF -->|provisions| PG
